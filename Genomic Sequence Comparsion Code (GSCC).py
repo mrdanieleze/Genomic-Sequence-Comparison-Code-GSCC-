@@ -20,7 +20,7 @@ from Bio.Seq import Seq
 
 # Constants
 NORMALIZATION_FACTOR = 10 
-# Used to normalize the alignment score to a range of 0-10, providing a more interpretable and standardized score 
+# Used to normalize the alignment score to a range of 0-10, providing a more interpretable and standardized score. 
 
 def compare_dna_sequences_list(target_sequence, known_sequences):
     """
