@@ -3,32 +3,31 @@
 # License: MIT
 
 # Description:
-# This script compares DNA sequences using pairwise alignment.
+# This script compares genomic sequences using pairwise alignment.
 
 # Usage:
-# - Provide a target DNA sequence (target_sequence) for comparison.
-# - Prepare a list of known DNA sequences (known_sequences) to compare with.
+# - Provide a target genomic sequence (target_sequence) for comparison.
+# - Prepare a list of known genomic sequences (known_sequences) to compare with.
 
 # Results:
 # The script returns a list of best alignments with simplified scores.
 
-# Note: DNA sequences are to be compared with only DNA sequences (same goes for RNA).
-# This code is primarily designed for comparing suspected sequences with known reference sequences.
+# Note: Genomic sequences can be either DNA or RNA. This code is primarily designed for comparing suspected sequences with known reference sequences.
 
 from Bio.Align import PairwiseAligner
 from Bio.Seq import Seq
 
 # Constants
 NORMALIZATION_FACTOR = 10 
-# Used to normalize the alignment score to a range of 0-10, providing a more interpretable and standardized score. 
+# Used to normalize the alignment score to a range of 0-10, providing a more interpretable and standardized score.
 
-def compare_dna_sequences_list(target_sequence, known_sequences):
+def compare_genomic_sequences_list(target_sequence, known_sequences):
     """
-    Compare a target DNA sequence with a list of known DNA sequences using pairwise alignment.
+    Compare a target genomic sequence with a list of known genomic sequences using pairwise alignment.
 
     Parameters:
-    - target_sequence (str): The target DNA sequence for comparison.
-    - known_sequences (list): List of known DNA sequences to compare with.
+    - target_sequence (str): The target genomic sequence for comparison.
+    - known_sequences (list): List of known genomic sequences to compare with.
 
     Returns:
     List of best alignments with simplified scores.
@@ -55,7 +54,7 @@ def compare_dna_sequences_list(target_sequence, known_sequences):
 target_sequence = "TCTTGATCAT"  # Replace with your target sequence
 known_sequences = ["TTATCCACA", "TTGTCCACA", "TTATCCATA"]  # Replace with your list of known sequences
 
-results = compare_dna_sequences_list(target_sequence, known_sequences)
+results = compare_genomic_sequences_list(target_sequence, known_sequences)
 
 # Assuming 'results' contains the alignment results
 simplified_results = [(a, b, score) for a, b, score, _, _ in results]
