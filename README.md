@@ -1,10 +1,10 @@
-# Daniels-Bioinformatics-Codes
+# Genomic Sequence Comparison Code (GSCC)
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Description
 
-Daniel's Bioinformatics Codes is a collection of Python scripts for Genomic sequence analysis. This repository includes tools for comparing suspected DNA sequences with known patterns. Explore bioinformatics algorithms and enhance your understanding of Genomic analysis.
+This repository contains python script which compares genomic sequences using pairwise alignment. Whether you're working with DNA or RNA, the GSCC provides a tool to analyze suspected sequences against known reference sequences.
 
 ## Usage
 
